@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chess — Playable Setup</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Chess — Playable Setup</h1>
+      <p class="subtitle">A from-scratch chess GUI, ported from the original Python/Tkinter version.</p>
+
+      <div id="board" class="board"></div>
+
+      <p id="status" class="status">White to move</p>
+
+      <div class="controls">
+        <button id="aiWhiteBtn">Enable AI: White</button>
+        <button id="aiBlackBtn">Enable AI: Black</button>
+        <button id="forfeitBtn">Forfeit</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+
+      <div class="controls timer-controls">
+        <label for="timerMinutes">Timer (minutes):</label>
+        <input id="timerMinutes" type="number" min="1" max="60" value="10">
+        <button id="startTimerBtn">Start Timer</button>
+        <button id="pauseTimerBtn">Pause Timer</button>
+      </div>
+
+      <div class="timebar">
+        <span id="whiteTime">White: 00:00</span>
+        <span id="blackTime">Black: 00:00</span>
+      </div>
+
+      <p class="footnote"><a href="https://github.com/Imythic/chess-game">View source on GitHub</a></p>
+    </main>
+
+    <div id="promoModal" class="modal hidden">
+      <div class="modal-card">
+        <p>Promote to:</p>
+        <div class="promo-options">
+          <button data-piece="Q">♕ Queen</button>
+          <button data-piece="R">♖ Rook</button>
+          <button data-piece="B">♗ Bishop</button>
+          <button data-piece="N">♘ Knight</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="chess.js"></script>
+  </body>
+</html>
